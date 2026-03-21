@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Developments — Argus Panoptes</title>
+  <title>Developments - Argus Panoptes</title>
   <meta name="description" content="Development roadmap and phase status for the Argus Panoptes platform." />
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -30,7 +30,7 @@
         <div class="divider"></div>
         <p style="color:var(--grey-text); max-width:600px; font-size:0.9rem; line-height:1.7;">
           Six phases from simulation foundation to full multi-drone deployment in realistic field conditions.
-          Each phase builds directly on the last — no skipping, no shortcuts.
+          Each phase builds directly on the last.
         </p>
       </div>
 
@@ -93,8 +93,33 @@
             </div>
             <div class="phase-body">
               <div class="phase-header">
-                <span class="phase-title">Flight Systems</span>
+                <span class="phase-title">Perception</span>
                 <span class="phase-status">Completed</span>
+              </div>
+              <p class="phase-desc">
+                Onboard camera pipeline feeding a RF-DETR detection model for top-down human
+                identification. ROS 2 perception nodes publishing detections with confidence scores.
+              </p>
+              <ul class="phase-items">
+                <li>YOLO26/RF-DETR</li>
+                <li>RGB Camera</li>
+                <li>Detection Node</li>
+                <li>Confidence Scoring</li>
+                <li>Roboflow Dataset</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Phase 3 -->
+          <div class="phase phase--inprogress">
+            <div class="phase-indicator">
+              <div class="phase-dot"></div>
+              <div class="phase-num">03</div>
+            </div>
+            <div class="phase-body">
+              <div class="phase-header">
+                <span class="phase-title">Flight Systems</span>
+                <span class="phase-status">In Progress</span>
               </div>
               <p class="phase-desc">
                 Full autonomous flight capability in simulation. Waypoint navigation, velocity
@@ -108,34 +133,6 @@
                 <li>Geofencing</li>
                 <li>Mission Logic</li>
                 <li>Controller Tuning</li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Phase 3 -->
-          <div class="phase phase--inprogress">
-            <div class="phase-indicator">
-              <div class="phase-dot"></div>
-              <div class="phase-num">03</div>
-            </div>
-            <div class="phase-body">
-              <div class="phase-header">
-                <span class="phase-title">Perception</span>
-                <span class="phase-status">In Progress</span>
-              </div>
-              <p class="phase-desc">
-                Onboard camera pipeline feeding a YOLOv8 / YOLO11 detection model for human
-                identification. Depth camera integration for 3D localisation of detected targets.
-                ROS 2 perception nodes publishing detections with confidence scores and 3D
-                position estimates relative to the drone frame.
-              </p>
-              <ul class="phase-items">
-                <li>YOLOv8 / YOLO11</li>
-                <li>Depth Camera</li>
-                <li>3D Localisation</li>
-                <li>Detection Node</li>
-                <li>Confidence Scoring</li>
-                <li>Roboflow Dataset</li>
               </ul>
             </div>
           </div>
