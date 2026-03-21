@@ -55,14 +55,14 @@
               <h2 style="font-size:1.4rem; margin-bottom:16px; color: var(--green);">Approach</h2>
               <p>
                 Rather than adapting commercial drone software to SAR tasks, Argus Panoptes
-                is built from first principles. The perception stack uses depth cameras and
-                trained neural networks to detect human presence without relying on thermal
-                imaging or active markers on the target.
+                is built from first principles. The perception stack uses RGB cameras and
+                trained neural networks to detect human presence from the top. Future improvements focus on
+                thermal imagery as well.
               </p>
               <p>
-                Swarm coordination is handled via a lightweight message-passing architecture
-                that degrades gracefully when individual nodes lose communication — a critical
-                property in forest canopy or canyon environments.
+                Swarm coordination will be handled by using ROS2's mesh network capabilites, such a Zenoh.
+                This open-source communication protocol and set of libraries is emerging as a leading middleware for ROS2 in mesh network scenarios, 
+                particularly for decentralized multi-robot systems (MRS) in challenging environments like planetary exploration.
               </p>
             </div>
 
@@ -70,7 +70,7 @@
               <p>
                 "Current SAR drone systems are either human-piloted and resource-intensive,
                 or autonomous only in controlled airspace. The gap between the lab demo and
-                the mountain at 2am in a rainstorm is enormous. That's the gap we're closing."
+                the mountain at 2am is enormous. That's the gap we're closing."
               </p>
             </div>
           </div>
@@ -79,33 +79,21 @@
           <div>
             <h2 style="font-size:1.4rem; margin-bottom:8px; color: var(--green);">The Team</h2>
             <p style="color: var(--grey-text); font-size: 0.85rem; margin-bottom: 0;">
-              Core research team — additional contributors listed on GitHub.
+              Core research team
             </p>
 
             <div class="team-grid">
 
               <div class="team-card">
-                <div class="name">Inigo</div>
+                <div class="name">Inigo Chandia </div>
                 <div class="role">Project Lead / Robotics</div>
-                <div class="bio">System architecture, ROS 2 integration, simulation environment, and swarm coordination.</div>
+                <div class="bio">System architecture, ROS 2 integration, simulation environment, and swarm coordination, computer vision pipeline, depth estimation, and target classification.</div>
               </div>
 
               <div class="team-card">
-                <div class="name">Placeholder</div>
+                <div class="name">Spencer Sedano</div>
                 <div class="role">Perception</div>
-                <div class="bio">Computer vision pipeline, YOLO integration, depth estimation, and target classification.</div>
-              </div>
-
-              <div class="team-card">
-                <div class="name">Placeholder</div>
-                <div class="role">Flight Systems</div>
-                <div class="bio">PX4 configuration, controller tuning, trajectory planning, and hardware-in-the-loop testing.</div>
-              </div>
-
-              <div class="team-card">
-                <div class="name">Placeholder</div>
-                <div class="role">Autonomy</div>
-                <div class="bio">Path planning algorithms, map-building, GPS-denied localisation, and mission logic.</div>
+                <div class="bio">PX4 configuration, controller tuning, trajectory planning, and hardware-in-the-loop testing, path planning algorithms, map-building, GPS-denied localisation, and mission logic.</div>
               </div>
 
             </div>
@@ -119,7 +107,7 @@
                 <span style="font-family:'Barlow Condensed',sans-serif; font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase; padding:4px 12px; border:1px solid #2e2e2e; color:#888;">PX4</span>
                 <span style="font-family:'Barlow Condensed',sans-serif; font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase; padding:4px 12px; border:1px solid #2e2e2e; color:#888;">Python</span>
                 <span style="font-family:'Barlow Condensed',sans-serif; font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase; padding:4px 12px; border:1px solid #2e2e2e; color:#888;">C++</span>
-                <span style="font-family:'Barlow Condensed',sans-serif; font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase; padding:4px 12px; border:1px solid #2e2e2e; color:#888;">YOLOv8</span>
+                <span style="font-family:'Barlow Condensed',sans-serif; font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase; padding:4px 12px; border:1px solid #2e2e2e; color:#888;">Computer Vision</span>
                 <span style="font-family:'Barlow Condensed',sans-serif; font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase; padding:4px 12px; border:1px solid #2e2e2e; color:#888;">Docker</span>
               </div>
             </div>
