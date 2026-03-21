@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Developments — Argus Panoptes</title>
+  <meta name="description" content="Development roadmap and phase status for the Argus Panoptes platform." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-logo">Argus <span>Panoptes</span></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="developments.html">Developments</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-wrapper">
+    <div class="page-content">
+
+      <!-- Page Header -->
+      <div class="section" style="padding-bottom: 0;">
+        <div class="section-label">Roadmap</div>
+        <h1 class="section-title" style="font-size: 3.8rem;">Developments</h1>
+        <div class="divider"></div>
+        <p style="color:var(--grey-text); max-width:600px; font-size:0.9rem; line-height:1.7;">
+          Six phases from simulation foundation to full multi-drone deployment in realistic field conditions.
+          Each phase builds directly on the last — no skipping, no shortcuts.
+        </p>
+      </div>
+
+      <!-- Status Legend -->
+      <div class="section" style="padding-top:32px; padding-bottom:0;">
+        <div style="display:flex; gap:28px; align-items:center;">
+          <div style="display:flex; align-items:center; gap:8px;">
+            <div style="width:10px;height:10px;background:var(--green);"></div>
+            <span style="font-family:'Barlow Condensed',sans-serif;font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--green);">Completed</span>
+          </div>
+          <div style="display:flex; align-items:center; gap:8px;">
+            <div style="width:10px;height:10px;background:var(--amber);"></div>
+            <span style="font-family:'Barlow Condensed',sans-serif;font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--amber);">In Progress</span>
+          </div>
+          <div style="display:flex; align-items:center; gap:8px;">
+            <div style="width:10px;height:10px;background:#333;"></div>
+            <span style="font-family:'Barlow Condensed',sans-serif;font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;color:#555;">Upcoming</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Roadmap -->
+      <div class="section">
+        <div class="roadmap">
+          <div class="roadmap-track"></div>
+
+          <!-- Phase 1 -->
+          <div class="phase phase--completed">
+            <div class="phase-indicator">
+              <div class="phase-dot"></div>
+              <div class="phase-num">01</div>
+            </div>
+            <div class="phase-body">
+              <div class="phase-header">
+                <span class="phase-title">Foundation</span>
+                <span class="phase-status">Completed</span>
+              </div>
+              <p class="phase-desc">
+                Establishing the simulation environment and core infrastructure. Docker-based
+                development workflow, ROS 2 workspace structure, Gazebo world setup, and baseline
+                X500 drone model integration with PX4 autopilot. Verified basic takeoff, hover,
+                and landing in simulation.
+              </p>
+              <ul class="phase-items">
+                <li>ROS 2 Humble</li>
+                <li>Gazebo Simulation</li>
+                <li>PX4 Integration</li>
+                <li>Docker Environment</li>
+                <li>X500 Model</li>
+                <li>MAVROS Bridge</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Phase 2 -->
+          <div class="phase phase--completed">
+            <div class="phase-indicator">
+              <div class="phase-dot"></div>
+              <div class="phase-num">02</div>
+            </div>
+            <div class="phase-body">
+              <div class="phase-header">
+                <span class="phase-title">Flight Systems</span>
+                <span class="phase-status">Completed</span>
+              </div>
+              <p class="phase-desc">
+                Full autonomous flight capability in simulation. Waypoint navigation, velocity
+                control, geofencing, and mission abort logic. Controller parameter tuning
+                for stability under payload variation. OFFBOARD mode control via ROS 2 topics.
+              </p>
+              <ul class="phase-items">
+                <li>Waypoint Nav</li>
+                <li>Offboard Control</li>
+                <li>Velocity Commands</li>
+                <li>Geofencing</li>
+                <li>Mission Logic</li>
+                <li>Controller Tuning</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Phase 3 -->
+          <div class="phase phase--inprogress">
+            <div class="phase-indicator">
+              <div class="phase-dot"></div>
+              <div class="phase-num">03</div>
+            </div>
+            <div class="phase-body">
+              <div class="phase-header">
+                <span class="phase-title">Perception</span>
+                <span class="phase-status">In Progress</span>
+              </div>
+              <p class="phase-desc">
+                Onboard camera pipeline feeding a YOLOv8 / YOLO11 detection model for human
+                identification. Depth camera integration for 3D localisation of detected targets.
+                ROS 2 perception nodes publishing detections with confidence scores and 3D
+                position estimates relative to the drone frame.
+              </p>
+              <ul class="phase-items">
+                <li>YOLOv8 / YOLO11</li>
+                <li>Depth Camera</li>
+                <li>3D Localisation</li>
+                <li>Detection Node</li>
+                <li>Confidence Scoring</li>
+                <li>Roboflow Dataset</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Phase 4 -->
+          <div class="phase phase--upcoming">
+            <div class="phase-indicator">
+              <div class="phase-dot"></div>
+              <div class="phase-num">04</div>
+            </div>
+            <div class="phase-body">
+              <div class="phase-header">
+                <span class="phase-title">Autonomy</span>
+                <span class="phase-status">Upcoming</span>
+              </div>
+              <p class="phase-desc">
+                Closing the loop between perception and flight. The drone will autonomously
+                plan search patterns, respond to detections, update a shared map, and execute
+                target confirmation approaches. Includes GPS-denied localisation using visual
+                odometry and onboard IMU fusion.
+              </p>
+              <ul class="phase-items">
+                <li>Search Patterns</li>
+                <li>Visual Odometry</li>
+                <li>Map Building</li>
+                <li>Reactive Planning</li>
+                <li>GPS-Denied Nav</li>
+                <li>Target Approach</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Phase 5 -->
+          <div class="phase phase--upcoming">
+            <div class="phase-indicator">
+              <div class="phase-dot"></div>
+              <div class="phase-num">05</div>
+            </div>
+            <div class="phase-body">
+              <div class="phase-header">
+                <span class="phase-title">Swarm</span>
+                <span class="phase-status">Upcoming</span>
+              </div>
+              <p class="phase-desc">
+                Extending single-agent capability to a coordinated multi-drone swarm.
+                Decentralised task allocation ensures coverage without a single point of failure.
+                Inter-agent communication handles shared map updates, deconfliction, and
+                dynamic reassignment when nodes drop out or locate a target.
+              </p>
+              <ul class="phase-items">
+                <li>Multi-Agent Sim</li>
+                <li>Task Allocation</li>
+                <li>Coverage Planning</li>
+                <li>Deconfliction</li>
+                <li>Shared Map</li>
+                <li>Node Dropout Handling</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Phase 6 -->
+          <div class="phase phase--upcoming">
+            <div class="phase-indicator">
+              <div class="phase-dot"></div>
+              <div class="phase-num">06</div>
+            </div>
+            <div class="phase-body">
+              <div class="phase-header">
+                <span class="phase-title">Realism</span>
+                <span class="phase-status">Upcoming</span>
+              </div>
+              <p class="phase-desc">
+                Hardening the system against real-world conditions. High-fidelity forest
+                environments with wind simulation, canopy occlusion, dynamic lighting, and
+                adverse weather modelling. Hardware-in-the-loop trials. Transition from
+                simulation to physical drone deployment.
+              </p>
+              <ul class="phase-items">
+                <li>Forest3D Worlds</li>
+                <li>Wind Simulation</li>
+                <li>Lighting Variation</li>
+                <li>HITL Testing</li>
+                <li>Hardware Trials</li>
+                <li>Field Validation</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <span class="footer-left">Argus Panoptes &mdash; arguspanoptes.org</span>
+      <span class="footer-right">&copy; 2026</span>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

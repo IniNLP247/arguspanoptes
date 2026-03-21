@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Argus Panoptes</title>
+  <meta name="description" content="The team and motivation behind the Argus Panoptes autonomous SAR platform." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-logo">Argus <span>Panoptes</span></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="developments.html">Developments</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-wrapper">
+    <div class="page-content">
+
+      <!-- Page Header -->
+      <div class="section" style="padding-bottom: 0;">
+        <div class="section-label">About the project</div>
+        <h1 class="section-title" style="font-size: 3.8rem;">Who We Are</h1>
+        <div class="divider"></div>
+      </div>
+
+      <!-- About Content -->
+      <div class="section" style="padding-top: 40px;">
+        <div class="about-grid">
+
+          <!-- Left: Project Description -->
+          <div>
+            <div class="about-block">
+              <h2 style="font-size:1.4rem; margin-bottom:16px; color: var(--green);">The Project</h2>
+              <p>
+                Argus Panoptes is a multi-drone autonomous search and rescue research platform.
+                The system is designed to deploy a coordinated swarm of UAVs into unknown,
+                GPS-denied environments and locate survivors using onboard computer vision,
+                real-time mapping, and decentralised task planning.
+              </p>
+              <p>
+                The platform is built on ROS 2 and simulated in Gazebo before real-world
+                hardware trials. Every design decision prioritises reliability under degraded
+                conditions over performance in ideal ones.
+              </p>
+            </div>
+
+            <div class="about-block">
+              <h2 style="font-size:1.4rem; margin-bottom:16px; color: var(--green);">Approach</h2>
+              <p>
+                Rather than adapting commercial drone software to SAR tasks, Argus Panoptes
+                is built from first principles. The perception stack uses depth cameras and
+                trained neural networks to detect human presence without relying on thermal
+                imaging or active markers on the target.
+              </p>
+              <p>
+                Swarm coordination is handled via a lightweight message-passing architecture
+                that degrades gracefully when individual nodes lose communication — a critical
+                property in forest canopy or canyon environments.
+              </p>
+            </div>
+
+            <div class="motivation-box">
+              <p>
+                "Current SAR drone systems are either human-piloted and resource-intensive,
+                or autonomous only in controlled airspace. The gap between the lab demo and
+                the mountain at 2am in a rainstorm is enormous. That's the gap we're closing."
+              </p>
+            </div>
+          </div>
+
+          <!-- Right: Team -->
+          <div>
+            <h2 style="font-size:1.4rem; margin-bottom:8px; color: var(--green);">The Team</h2>
+            <p style="color: var(--grey-text); font-size: 0.85rem; margin-bottom: 0;">
+              Core research team — additional contributors listed on GitHub.
+            </p>
+
+            <div class="team-grid">
+
+              <div class="team-card">
+                <div class="name">Inigo</div>
+                <div class="role">Project Lead / Robotics</div>
+                <div class="bio">System architecture, ROS 2 integration, simulation environment, and swarm coordination.</div>
+              </div>
+
+              <div class="team-card">
+                <div class="name">Placeholder</div>
+                <div class="role">Perception</div>
+                <div class="bio">Computer vision pipeline, YOLO integration, depth estimation, and target classification.</div>
+              </div>
+
+              <div class="team-card">
+                <div class="name">Placeholder</div>
+                <div class="role">Flight Systems</div>
+                <div class="bio">PX4 configuration, controller tuning, trajectory planning, and hardware-in-the-loop testing.</div>
+              </div>
+
+              <div class="team-card">
+                <div class="name">Placeholder</div>
+                <div class="role">Autonomy</div>
+                <div class="bio">Path planning algorithms, map-building, GPS-denied localisation, and mission logic.</div>
+              </div>
+
+            </div>
+
+            <!-- Tech Stack -->
+            <div style="margin-top: 40px;">
+              <h3 style="font-size:0.85rem; letter-spacing:0.15em; color:var(--grey-text); margin-bottom:14px;">CORE STACK</h3>
+              <div style="display:flex; flex-wrap:wrap; gap:8px;">
+                <span style="font-family:'Barlow Condensed',sans-serif; font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase; padding:4px 12px; border:1px solid #2e2e2e; color:#888;">ROS 2 Humble</span>
+                <span style="font-family:'Barlow Condensed',sans-serif; font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase; padding:4px 12px; border:1px solid #2e2e2e; color:#888;">Gazebo</span>
+                <span style="font-family:'Barlow Condensed',sans-serif; font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase; padding:4px 12px; border:1px solid #2e2e2e; color:#888;">PX4</span>
+                <span style="font-family:'Barlow Condensed',sans-serif; font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase; padding:4px 12px; border:1px solid #2e2e2e; color:#888;">Python</span>
+                <span style="font-family:'Barlow Condensed',sans-serif; font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase; padding:4px 12px; border:1px solid #2e2e2e; color:#888;">C++</span>
+                <span style="font-family:'Barlow Condensed',sans-serif; font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase; padding:4px 12px; border:1px solid #2e2e2e; color:#888;">YOLOv8</span>
+                <span style="font-family:'Barlow Condensed',sans-serif; font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase; padding:4px 12px; border:1px solid #2e2e2e; color:#888;">Docker</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <span class="footer-left">Argus Panoptes &mdash; arguspanoptes.org</span>
+      <span class="footer-right">&copy; 2026</span>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
